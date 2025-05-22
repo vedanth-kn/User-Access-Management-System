@@ -1,5 +1,5 @@
 /user_access_app/node_modules
 /user_access_server/node_modules
 
-/user_access_app/.env
+/.env
 /user_access_server/.env
