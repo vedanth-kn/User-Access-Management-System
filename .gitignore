@@ -1,4 +1,4 @@
 /user_access_app/node_modules
 /user_access_server/node_modules
 
-.env
+**/.env
