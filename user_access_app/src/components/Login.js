@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useRouter } from '../context/RouterContext';
-import '../styles/Login.css';
+import '../styles/Auth.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
@@ -42,16 +42,16 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
+    <div className="auth-container">
+      <div className="auth-box">
         <div>
-          <h2 className="login-heading">Sign In</h2>
+          <h2 className="auth-title">Sign In</h2>
         </div>
-        <form className="login-form" onSubmit={handleSubmit}>
-          {error && <div className="login-error">{error}</div>}
+        <form className="auth-form" onSubmit={handleSubmit}>
+          {error && <div className="auth-error">{error}</div>}
 
-          <div>
-            <label htmlFor="username" className="login-label">Username</label>
+          <div className="auth-form-group">
+            <label htmlFor="username" className="auth-label">Username</label>
             <input
               id="username"
               name="username"
@@ -59,12 +59,12 @@ const Login = () => {
               required
               value={formData.username}
               onChange={handleChange}
-              className="login-input"
+              className="auth-input"
             />
           </div>
 
-          <div>
-            <label htmlFor="password" className="login-label">Password</label>
+          <div className="auth-form-group">
+            <label htmlFor="password" className="auth-label">Password</label>
             <input
               id="password"
               name="password"
@@ -72,25 +72,25 @@ const Login = () => {
               required
               value={formData.password}
               onChange={handleChange}
-              className="login-input"
+              className="auth-input"
             />
           </div>
 
-          <div>
+          <div className="auth-form-group">
             <button
               type="submit"
               disabled={loading}
-              className="login-button"
+              className="auth-button"
             >
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
           </div>
 
-          <div className="login-footer">
+          <div className="auth-footer">
             <button
               type="button"
               onClick={() => navigate('/signup')}
-              className="signup-link"
+              className="auth-link"
             >
               Don't have an account? Sign up
             </button>

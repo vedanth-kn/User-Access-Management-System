@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useRouter } from '../context/RouterContext';
-
-import '../styles/Signup.css';
+import '../styles/Auth.css';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -45,25 +44,25 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
-      <div className="signup-box">
+    <div className="auth-container">
+      <div className="auth-box">
         <div>
-          <h2 className="signup-title">Create Account</h2>
+          <h2 className="auth-title">Create Account</h2>
         </div>
-        <form className="signup-form" onSubmit={handleSubmit}>
+        <form className="auth-form" onSubmit={handleSubmit}>
           {error && (
-            <div className="signup-error">
+            <div className="auth-error">
               {error}
             </div>
           )}
           {success && (
-            <div className="signup-success">
+            <div className="auth-success">
               {success}
             </div>
           )}
           
-          <div className="form-group">
-            <label htmlFor="username" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="username" className="auth-label">
               Username
             </label>
             <input
@@ -73,12 +72,12 @@ const Signup = () => {
               required
               value={formData.username}
               onChange={handleChange}
-              className="form-input"
+              className="auth-input"
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="password" className="auth-label">
               Password
             </label>
             <input
@@ -88,12 +87,12 @@ const Signup = () => {
               required
               value={formData.password}
               onChange={handleChange}
-              className="form-input"
+              className="auth-input"
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="role" className="form-label">
+          <div className="auth-form-group">
+            <label htmlFor="role" className="auth-label">
               Role
             </label>
             <select
@@ -101,7 +100,7 @@ const Signup = () => {
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="form-select"
+              className="auth-select"
             >
               <option value="Employee">Employee</option>
               <option value="Manager">Manager</option>
@@ -109,21 +108,21 @@ const Signup = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="auth-form-group">
             <button
               type="submit"
               disabled={loading}
-              className="submit-button"
+              className="auth-button"
             >
               {loading ? 'Creating Account...' : 'Sign Up'}
             </button>
           </div>
 
-          <div className="text-center">
+          <div className="auth-footer">
             <button
               type="button"
               onClick={() => navigate('/login')}
-              className="link-button"
+              className="auth-link"
             >
               Already have an account? Login
             </button>
