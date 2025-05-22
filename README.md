@@ -112,22 +112,14 @@ user_access_management/
 3. **Environment Configuration:**
    - Copy `.env.example` to `.env`
    - Update the environment variables:
-   ```env
-   # Database Configuration
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_USERNAME=your_db_username
-   DB_PASSWORD=your_db_password
-   DB_DATABASE=user_access_db
-   
-   # JWT Configuration
-   JWT_SECRET=your_jwt_secret_key
-   JWT_EXPIRES_IN=24h
-   
-   # Server Configuration
-   PORT=5000
-   NODE_ENV=development
-   ```
+  ```env
+  # Database
+  DB_HOST=localhost
+  DB_PORT=5432
+  DB_USERNAME=your_username
+  DB_PASSWORD=your_password
+  DB_DATABASE=user_access_db
+  ```
 
 4. **Database Setup:**
    - Create a new database in PostgreSQL/MySQL
@@ -168,14 +160,6 @@ DB_PORT=5432
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 DB_DATABASE=user_access_db
-
-# JWT
-JWT_SECRET=your-super-secret-jwt-key
-JWT_EXPIRES_IN=24h
-
-# Server
-PORT=5000
-NODE_ENV=development
 ```
 
 ## 🚀 Usage
