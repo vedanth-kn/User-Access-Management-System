@@ -1,0 +1,47 @@
+/* src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.not-found-container {
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.not-found-message {
+  color: #718096;
+  margin-top: 8px;
+}
+
+.redirect-button {
+  margin-top: 16px;
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redirect-button:hover {
+  background-color: #1d4ed8;
+}

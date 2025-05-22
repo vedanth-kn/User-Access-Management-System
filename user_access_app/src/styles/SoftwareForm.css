@@ -1,0 +1,276 @@
+/* SoftwareForm.css */
+
+/* Card Container */
+.software-form-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.software-form-header {
+  padding: 20px 24px;
+}
+
+.software-form-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.software-form-subtitle {
+  margin: 4px 0 0 0;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Form Content */
+.software-form-content {
+  border-top: 1px solid #e5e7eb;
+  padding: 20px 24px;
+}
+
+/* Error Message */
+.software-form-error {
+  margin-bottom: 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.software-form-error-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.software-form-error-icon {
+  flex-shrink: 0;
+}
+
+.software-form-error-svg {
+  height: 20px;
+  width: 20px;
+  color: #f87171;
+}
+
+.software-form-error-message {
+  margin-left: 12px;
+}
+
+.software-form-error-text {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Form Fields Container */
+.software-form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.software-form-field {
+  display: block;
+}
+
+/* Labels */
+.software-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.software-form-checkbox-group-label {
+  margin-bottom: 12px;
+}
+
+.software-form-required {
+  color: #ef4444;
+}
+
+/* Form Inputs */
+.software-form-input,
+.software-form-textarea {
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.875rem;
+  padding: 8px 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.software-form-input:focus,
+.software-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.software-form-input:disabled,
+.software-form-textarea:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.software-form-textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.software-form-input::placeholder,
+.software-form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Checkbox Group */
+.software-form-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.software-form-checkbox-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.software-form-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.software-form-checkbox {
+  height: 16px;
+  width: 16px;
+  color: #2563eb;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.software-form-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.software-form-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.software-form-checkbox-content {
+  margin-left: 12px;
+  font-size: 0.875rem;
+}
+
+.software-form-checkbox-label {
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  display: block;
+}
+
+.software-form-checkbox-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Form Actions */
+.software-form-actions {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.software-form-cancel-btn,
+.software-form-submit-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.software-form-cancel-btn {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.software-form-cancel-btn:hover {
+  background-color: #f9fafb;
+}
+
+.software-form-cancel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.software-form-cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.software-form-submit-btn {
+  background-color: #2563eb;
+  border: 1px solid transparent;
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.software-form-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.software-form-submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.software-form-submit-btn-disabled {
+  background-color: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+.software-form-submit-btn-disabled:hover {
+  background-color: #9ca3af !important;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .software-form-header {
+    padding: 16px;
+  }
+  
+  .software-form-content {
+    padding: 16px;
+  }
+  
+  .software-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  
+  .software-form-cancel-btn,
+  .software-form-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

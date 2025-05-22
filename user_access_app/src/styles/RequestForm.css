@@ -1,0 +1,231 @@
+/* RequestForm.css */
+
+/* Card Container */
+.request-form-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.request-form-header {
+  padding: 20px 24px;
+}
+
+.request-form-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.request-form-subtitle {
+  margin: 4px 0 0 0;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Form Content */
+.request-form-content {
+  border-top: 1px solid #e5e7eb;
+  padding: 20px 24px;
+}
+
+/* Error Message */
+.request-form-error {
+  margin-bottom: 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.request-form-error-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.request-form-error-icon {
+  flex-shrink: 0;
+}
+
+.request-form-error-svg {
+  height: 20px;
+  width: 20px;
+  color: #f87171;
+}
+
+.request-form-error-message {
+  margin-left: 12px;
+}
+
+.request-form-error-text {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Form Fields Container */
+.request-form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.request-form-field {
+  display: block;
+}
+
+/* Labels */
+.request-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.request-form-required {
+  color: #ef4444;
+}
+
+/* Loading Text */
+.request-form-loading {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Form Inputs */
+.request-form-select,
+.request-form-textarea {
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.875rem;
+  padding: 8px 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.request-form-select:focus,
+.request-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.request-form-select:disabled,
+.request-form-textarea:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.request-form-textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.request-form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Field Description/Help Text */
+.request-form-description,
+.request-form-help {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Form Actions */
+.request-form-actions {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.request-form-cancel-btn,
+.request-form-submit-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.request-form-cancel-btn {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.request-form-cancel-btn:hover {
+  background-color: #f9fafb;
+}
+
+.request-form-cancel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.request-form-cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.request-form-submit-btn {
+  background-color: #2563eb;
+  border: 1px solid transparent;
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.request-form-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.request-form-submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.request-form-submit-btn-disabled {
+  background-color: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+.request-form-submit-btn-disabled:hover {
+  background-color: #9ca3af !important;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .request-form-header {
+    padding: 16px;
+  }
+  
+  .request-form-content {
+    padding: 16px;
+  }
+  
+  .request-form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  
+  .request-form-cancel-btn,
+  .request-form-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

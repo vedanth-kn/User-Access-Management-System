@@ -1,0 +1,259 @@
+/* SoftwareList.css */
+
+/* Container */
+.software-list-container {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.software-list-empty-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  text-align: center;
+}
+
+/* Header */
+.software-list-header {
+  padding: 20px 24px;
+}
+
+.software-list-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.software-list-subtitle {
+  margin: 4px 0 0 0;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Empty State */
+.software-list-empty {
+  color: #6b7280;
+}
+
+.software-list-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: #9ca3af;
+}
+
+.software-list-empty-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.software-list-empty-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* List */
+.software-list {
+  border-top: 1px solid #e5e7eb;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.software-list-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.software-list-item:last-child {
+  border-bottom: none;
+}
+
+.software-list-item-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.software-list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.software-list-item-info {
+  display: flex;
+  align-items: center;
+}
+
+.software-list-item-avatar {
+  flex-shrink: 0;
+}
+
+.software-list-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-list-avatar-text {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.software-list-item-details {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.software-list-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.software-list-item-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.software-list-item-id {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.software-list-item-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 4px 0 8px 0;
+}
+
+/* Badges */
+.software-list-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.software-list-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.software-list-badge-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.software-list-badge-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.software-list-badge-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.software-list-badge-gray {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Actions */
+.software-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.software-list-edit-btn,
+.software-list-delete-btn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.software-list-edit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.software-list-edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.software-list-delete-btn {
+  background-color: #dc2626;
+  color: white;
+}
+
+.software-list-delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.software-list-delete-btn-disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.software-list-delete-btn-disabled:hover {
+  background-color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .software-list-header {
+    padding: 16px;
+  }
+  
+  .software-list-item {
+    padding: 16px;
+  }
+  
+  .software-list-item-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .software-list-actions {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  
+  .software-list-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .software-list-item-title {
+    white-space: normal;
+  }
+}

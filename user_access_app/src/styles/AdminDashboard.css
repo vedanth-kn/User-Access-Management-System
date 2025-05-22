@@ -1,0 +1,401 @@
+/* AdminDashboard.css */
+
+/* Container and Layout */
+.admin-dashboard-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Loading Styles */
+.admin-loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.admin-loading-content {
+  text-align: center;
+}
+
+.admin-spinner {
+  width: 48px;
+  height: 48px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.admin-loading-text {
+  margin-top: 16px;
+  color: #6b7280;
+}
+
+/* Navigation Bar */
+.admin-navbar {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.admin-navbar-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.admin-navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.admin-navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.admin-navbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-welcome-text {
+  color: #374151;
+}
+
+.admin-logout-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-logout-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Tab Navigation */
+.admin-tabs-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 16px;
+  padding-top: 24px;
+}
+
+.admin-tabs-wrapper {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-tabs-nav {
+  display: flex;
+  gap: 32px;
+  margin-bottom: -1px;
+}
+
+.admin-tab-btn {
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-tab-btn:hover {
+  color: #374151;
+  border-bottom-color: #d1d5db;
+}
+
+.admin-tab-btn-active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+/* Main Content */
+.admin-main-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.admin-content-wrapper {
+  padding: 0 16px;
+}
+
+/* Statistics Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.admin-stat-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.admin-stat-content {
+  padding: 20px;
+}
+
+.admin-stat-layout {
+  display: flex;
+  align-items: center;
+}
+
+.admin-stat-icon {
+  flex-shrink: 0;
+}
+
+.admin-stat-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-stat-icon-blue {
+  background-color: #3b82f6;
+}
+
+.admin-stat-icon-green {
+  background-color: #10b981;
+}
+
+.admin-stat-icon-yellow {
+  background-color: #f59e0b;
+}
+
+.admin-stat-icon-text {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.admin-stat-info {
+  margin-left: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-stat-details {
+  display: block;
+}
+
+.admin-stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.admin-stat-value {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+/* Admin Controls Card */
+.admin-controls-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.admin-controls-header {
+  padding: 20px 24px;
+}
+
+.admin-controls-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.admin-controls-description {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.admin-controls-content {
+  border-top: 1px solid #e5e7eb;
+  padding: 20px 24px;
+}
+
+.admin-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .admin-controls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.admin-control-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-control-btn-blue {
+  background-color: #2563eb;
+}
+
+.admin-control-btn-blue:hover {
+  background-color: #1d4ed8;
+}
+
+.admin-control-btn-green {
+  background-color: #059669;
+}
+
+.admin-control-btn-green:hover {
+  background-color: #047857;
+}
+
+.admin-control-btn-purple {
+  background-color: #7c3aed;
+}
+
+.admin-control-btn-purple:hover {
+  background-color: #6d28d9;
+}
+
+.admin-control-btn-orange {
+  background-color: #ea580c;
+}
+
+.admin-control-btn-orange:hover {
+  background-color: #c2410c;
+}
+
+/* Software Management Section */
+.admin-software-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-software-info {
+  flex: 1;
+}
+
+.admin-software-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.admin-software-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+.admin-add-software-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.admin-add-software-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.admin-software-form-container {
+  margin-bottom: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .admin-navbar-content {
+    padding: 0 16px;
+  }
+  
+  .admin-tabs-container {
+    padding: 0 16px;
+    padding-top: 24px;
+  }
+  
+  .admin-software-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .admin-navbar-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+    gap: 12px;
+  }
+  
+  .admin-navbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

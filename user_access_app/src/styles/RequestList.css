@@ -1,0 +1,415 @@
+/* RequestList.css */
+
+/* Container Styles */
+.request-list-container {
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.request-list-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.request-list-full-container {
+  background: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+
+/* Header Styles */
+.request-list-header {
+  padding: 1.25rem 1.5rem;
+}
+
+.request-list-title {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.request-list-subtitle {
+  margin-top: 0.25rem;
+  max-width: 42rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+/* Loading Styles */
+.request-list-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.request-list-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: request-list-spin 1s linear infinite;
+}
+
+@keyframes request-list-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.request-list-loading-text {
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.request-list-loading-skeleton {
+  width: 100%;
+}
+
+.request-list-skeleton-header {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 25%;
+  margin-bottom: 1rem;
+  animation: request-list-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.request-list-skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.request-list-skeleton-line {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  animation: request-list-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.request-list-skeleton-line-short {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 83.333333%;
+  animation: request-list-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.request-list-skeleton-line-medium {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 66.666667%;
+  animation: request-list-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes request-list-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Error Styles */
+.request-list-error {
+  text-align: center;
+  color: #dc2626;
+  padding: 2rem;
+}
+
+.request-list-error-icon {
+  margin: 0 auto;
+  height: 3rem;
+  width: 3rem;
+  color: #fca5a5;
+  margin-bottom: 1rem;
+}
+
+.request-list-error-text {
+  color: #dc2626;
+  margin: 0;
+}
+
+/* Empty State Styles */
+.request-list-empty-state {
+  text-align: center;
+  padding: 2rem;
+}
+
+.request-list-empty-content {
+  color: #6b7280;
+}
+
+.request-list-empty-icon {
+  margin: 0 auto;
+  height: 3rem;
+  width: 3rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.request-list-empty-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.request-list-empty-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* List Styles */
+.request-list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.request-list-with-border {
+  border-top: 1px solid #e5e7eb;
+}
+
+.request-list-items > .request-list-item:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.request-list-item {
+  padding: 1rem 1.5rem;
+}
+
+.request-list-item-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request-list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.request-list-item-content {
+  display: flex;
+  align-items: center;
+}
+
+.request-list-avatar-container {
+  flex-shrink: 0;
+}
+
+.request-list-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #3b82f6;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.request-list-avatar-text {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.request-list-details {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.request-list-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request-list-main-info {
+  flex: 1;
+}
+
+.request-list-software-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.request-list-badges {
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.request-list-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Badge Colors */
+.request-list-badge-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.request-list-badge-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.request-list-badge-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.request-list-badge-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.request-list-badge-purple {
+  background-color: #e9d5ff;
+  color: #7c2d12;
+}
+
+.request-list-badge-gray {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Text Styles */
+.request-list-reason {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0.5rem 0 0 0;
+}
+
+.request-list-date {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Status Container */
+.request-list-status-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.request-list-status-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.request-list-status-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.request-list-status-text {
+  font-size: 0.875rem;
+}
+
+.request-list-status-pending {
+  color: #d97706;
+}
+
+.request-list-status-approved {
+  color: #059669;
+}
+
+.request-list-status-rejected {
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .request-list-header {
+    padding: 1rem;
+  }
+  
+  .request-list-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .request-list-item-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .request-list-status-container {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  
+  .request-list-avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .request-list-avatar-text {
+    font-size: 0.75rem;
+  }
+  
+  .request-list-details {
+    margin-left: 0.75rem;
+  }
+  
+  .request-list-software-name {
+    font-size: 1rem;
+  }
+  
+  .request-list-badges {
+    flex-wrap: wrap;
+  }
+}
+
+/* Hover Effects */
+.request-list-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Focus Styles for Accessibility */
+.request-list-item:focus-within {
+  background-color: #f3f4f6;
+  outline: 2px solid #3b82f6;
+  outline-offset: -2px;
+}
+
+/* Animation for New Items */
+.request-list-item {
+  animation: request-list-fade-in 0.3s ease-in-out;
+}
+
+@keyframes request-list-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
